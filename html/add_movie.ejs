@@ -1,0 +1,108 @@
+<%- include('header') %>
+
+         
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              
+
+              <!-- Basic Layout -->
+              <div class="row">
+                <div class="col-xl">
+                  <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h5 class="mb-0">add hospital</h5>
+                      <small class="text-muted float-end">Default label</small>
+                    </div>
+                    <div class="card-body">
+                      <form method="post" action="/add_moviedata" enctype="multipart/form-data">
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-fullname">movie name</label>
+                          <input type="text" name="mname" class="form-control" id="basic-default-fullname" placeholder="movie name here" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-company">movie rating</label>
+                          <input type="text" name="rating" class="form-control" id="basic-default-company" placeholder="movie rating here" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-company">movie cast</label>
+                          <input type="text" name="cast" class="form-control" id="basic-default-company" placeholder="cast name" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-company">movie description</label>
+                          <input type="text" name="description" class="form-control" id="basic-default-company" placeholder="cast name" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-company">movie type</label>
+                          <input type="text" name="movietype" class="form-control" id="basic-default-company" placeholder="cast name" />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-company">movie poster</label>
+                          <input type="file" name="avtar" class="form-control" id="basic-default-company" placeholder="movie poster" />
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , made with ❤️ by
+                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                </div>
+                <div>
+                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+
+                  <a
+                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Documentation</a
+                  >
+
+                  <a
+                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Support</a
+                  >
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <%- include('footer')%>
+  </body>
+</html>

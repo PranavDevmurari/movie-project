@@ -1,0 +1,85 @@
+<%- include('header')%>
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              
+              
+              <!-- Basic Bootstrap Table -->
+              <div class="card">
+                <h5 class="card-header">active datas</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>no</th>
+                        <th>movie name</th>
+                        <th>movie rating </th>
+                        <th>movie cast</th>
+                        <th>movie description</th>
+                        <th>movie type</th>
+                        <th>movie poster</th>
+                        <th>status</th>                       
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <% var no = '1'; for(var mov of movieactivedata) {%>                      
+                        <tr>
+                          <th scope="row"><%= no ++ %></th>
+                          <td><%= mov.mname %></td>
+                          <td><%= mov.rating%></td>                                              
+                          <td><%= mov.cast%></td> 
+                          <td><%= mov.description%></td> 
+                          <td><%= mov.movietype%></td> 
+                          <td><img src="<%=mov.avtar%>" height="100px" alt=""></td>                     
+                          <td><a href="/deactive/<%=mov.id%>">deactive</a></td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                  </table>                 
+                </div>
+              </div>
+              <!-- deactive data -->
+              <div class="card mt-5">
+                <h5 class="card-header">deactive datas</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>no</th>
+                        <th>movie name</th>
+                        <th>movie rating </th>
+                        <th>movie cast</th>
+                        <th>movie description</th>
+                        <th>movie type</th>
+                        <th>movie poster</th>
+                        <th>status</th>                       
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <% var no = '1'; for(var mov of moviedeactivedata) {%>                      
+                        <tr>
+                          <th scope="row"><%= no ++ %></th>
+                          <td><%= mov.mname %></td>
+                          <td><%= mov.rating%></td>                                              
+                          <td><%= mov.cast%></td> 
+                          <td><%=mov.description%></td> 
+                          <td><%= mov.movietype%></td> 
+                          <td><img src="<%=mov.avtar%>" height="100px" alt=""></td>                     
+                          <td><a href="/active/<%=mov.id%>">active</a></td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                  </table>      
+                </div>
+              </div>
+              <!--/ Basic Bootstrap Table -->
+
+              
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <%- include('footer')%>
+  </body>
+</html>

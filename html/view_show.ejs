@@ -1,0 +1,50 @@
+<%- include('header')%>
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              
+              
+              <!-- Basic Bootstrap Table -->
+              <div class="card">
+                <h5 class="card-header">show datas</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>no</th>
+                        <th>movie name</th>
+                        <th>show place </th>
+                        <th>show date </th>
+                        <th>show time</th>
+                        <th>ticketprice</th>     
+                        <th>delete</th>                                                          
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <% var no = '1'; for(var sh of showdata) {%>                      
+                        <tr>
+                          <th scope="row"><%= no ++ %></th>
+                          <td><%= sh.movieid.mname %></td>
+                          <td><%= sh.place%></td>                                              
+                          <td><%= sh.date%></td>                           
+                          <td><%= sh.time%></td>                           
+                          <td><%= sh.ticketprice%></td>                           
+                          <td><a href="deleteshow/<%=sh.id%>">deleteshow</a></td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                  </table>                 
+                </div>
+              </div>
+              
+              <!--/ Basic Bootstrap Table -->
+
+              
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <%- include('footer')%>
+  </body>
+</html>
