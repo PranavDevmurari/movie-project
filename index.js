@@ -7,6 +7,14 @@ const app = express();
 const path = require('path');
 
 const db = require('./config/moongose');
+mongoose.connect("mongodb+srv://pranavad76:pranav@69896@cluster0.agtnctp.mongodb.net/test" , {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log("DB connected!...");
+}).catch(err => {
+    console.log("Error connecting to DB:", err);
+});
 const passport = require('passport');
 const session = require('express-session');
 
